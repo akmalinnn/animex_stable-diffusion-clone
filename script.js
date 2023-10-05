@@ -51,9 +51,6 @@ async function generateImages(input) {
       }
     );
 
-    if (!response.ok) {
-      alert('Failed to generate image puny human !');
-    }
 
     const blob = await response.blob();
     const imgUrl = URL.createObjectURL(blob);
