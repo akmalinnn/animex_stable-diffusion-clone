@@ -36,7 +36,8 @@ async function generateImages(input) {
 
   for (let i = 0; i < maxImages; i++) {
     // generate a random number between 1 and 1000 and append it to the prompt
-    const randomNumber = getRandomNumber(1, 1000);
+    // klo dikecilin variasinya dikit
+    const randomNumber = getRandomNumber(1, 5);
     const prompt = `${input} ${randomNumber}`;
     // We added random number to prompt to create different results
     const response = await fetch(
