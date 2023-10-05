@@ -1,0 +1,15 @@
+async function query(data) {
+	const response = await fetch(
+		"https://api-inference.huggingface.co/models/Linaqruf/animagine-xl",
+		{
+			headers: { Authorization: "Bearer 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" },
+			method: "POST",
+			body: JSON.stringify(data),
+		}
+	);
+	const result = await response.blob();
+	return result;
+}
+query({"inputs": "Astronaut riding a horse"}).then((response) => {
+	// Use image
+});
